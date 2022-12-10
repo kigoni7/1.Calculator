@@ -1,0 +1,39 @@
+# define the functions for the calculator
+def add(a, b):
+  return a + b
+
+def subtract(a, b):
+  return a - b
+
+def multiply(a, b):
+  return a * b
+
+def divide(a, b):
+  return a / b
+
+# main function that runs the calculator
+def main():
+  # prompt the user to enter the operation they want to perform
+  operation = input("Enter the operation you want to perform (+, -, *, /): ")
+
+  # prompt the user to enter the two numbers they want to perform the operation on
+  num1,num2 = int(input("Enter the first number: ")).split()
+
+  # use an if-elif-else statement to determine which operation to perform
+  if operation == "+":
+    result = add(num1, num2)
+  elif operation == "-":
+    result = subtract(num1, num2)
+  elif operation == "*":
+    result = multiply(num1, num2)
+  elif operation == "/":
+    result = divide(num1, num2)
+  else:
+    # if the user entered an invalid operation, display an error message
+    print("Invalid operation. Please try again.")
+
+  # print the result of the operation
+  print(result)
+
+# run the main function
+main()
